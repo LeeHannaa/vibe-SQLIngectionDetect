@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "vercel dev",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "functions": {
+    "api/analyze.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
+

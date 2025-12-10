@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+    font-family: 'Pretendard', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Dark Theme - VSCode Dark+ 스타일 */
+  [data-theme='dark'] body {
+    @apply bg-[#1e1e1e] text-[#d4d4d4];
+  }
+
+  /* Light Theme - VSCode Light+ 스타일 */
+  [data-theme='light'] body {
+    @apply bg-[#ffffff] text-[#333333];
+  }
+}
+
+@layer components {
+  .code-block {
+    @apply font-mono text-sm p-4 rounded-lg overflow-x-auto;
+    font-family: 'JetBrains Mono', monospace;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  [data-theme='dark'] .code-block {
+    @apply bg-[#252526] text-[#4ec9b0];
+  }
+
+  [data-theme='light'] .code-block {
+    @apply bg-[#f3f3f3] text-[#098658];
+  }
+  
+  .vulnerability-code {
+    @apply font-mono text-sm p-2 rounded border-l-4;
+    font-family: 'JetBrains Mono', monospace;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  [data-theme='dark'] .vulnerability-code {
+    @apply bg-[#3a1d1d] text-[#f48771] border-[#f48771];
+  }
+
+  [data-theme='light'] .vulnerability-code {
+    @apply bg-[#ffe5e5] text-[#a1260d] border-[#a1260d];
+  }
+  
+  .attack-input {
+    @apply font-mono text-sm p-2 rounded;
+    font-family: 'JetBrains Mono', monospace;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  [data-theme='dark'] .attack-input {
+    @apply bg-[#3a1d1d] text-[#f48771];
+  }
+
+  [data-theme='light'] .attack-input {
+    @apply bg-[#ffe5e5] text-[#a1260d];
+  }
+  
+  .attack-query {
+    @apply font-mono text-sm p-2 rounded;
+    font-family: 'JetBrains Mono', monospace;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  [data-theme='dark'] .attack-query {
+    @apply bg-[#3a2d1d] text-[#dcdcaa];
+  }
+
+  [data-theme='light'] .attack-query {
+    @apply bg-[#fff4e5] text-[#795e26];
+  }
+}
+
